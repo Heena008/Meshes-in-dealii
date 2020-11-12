@@ -1,0 +1,10 @@
+/home/heena/research/Meshes-in-dealii/CMakeFiles/rebuild_cache.dir
+/home/heena/research/Meshes-in-dealii/CMakeFiles/info.dir
+/home/heena/research/Meshes-in-dealii/CMakeFiles/edit_cache.dir
+/home/heena/research/Meshes-in-dealii/CMakeFiles/strip_comments.dir
+/home/heena/research/Meshes-in-dealii/CMakeFiles/distclean.dir
+/home/heena/research/Meshes-in-dealii/CMakeFiles/runclean.dir
+/home/heena/research/Meshes-in-dealii/CMakeFiles/release.dir
+/home/heena/research/Meshes-in-dealii/CMakeFiles/debug.dir
+/home/heena/research/Meshes-in-dealii/CMakeFiles/run.dir
+/home/heena/research/Meshes-in-dealii/CMakeFiles/mesh.dir

@@ -1,0 +1,141 @@
+\hypertarget{mesh_8cc}{}\doxysection{/home/heena/research/\+Meshes-\/in-\/dealii/mesh.cc File Reference}
+\label{mesh_8cc}\index{/home/heena/research/Meshes-\/in-\/dealii/mesh.cc@{/home/heena/research/Meshes-\/in-\/dealii/mesh.cc}}
+{\ttfamily \#include $<$deal.\+I\+I/base/function.\+h$>$}\newline
+{\ttfamily \#include $<$deal.\+I\+I/base/logstream.\+h$>$}\newline
+{\ttfamily \#include $<$deal.\+I\+I/base/quadrature\+\_\+lib.\+h$>$}\newline
+{\ttfamily \#include $<$deal.\+I\+I/dofs/dof\+\_\+accessor.\+h$>$}\newline
+{\ttfamily \#include $<$deal.\+I\+I/dofs/dof\+\_\+handler.\+h$>$}\newline
+{\ttfamily \#include $<$deal.\+I\+I/dofs/dof\+\_\+tools.\+h$>$}\newline
+{\ttfamily \#include $<$deal.\+I\+I/fe/fe\+\_\+q.\+h$>$}\newline
+{\ttfamily \#include $<$deal.\+I\+I/fe/fe\+\_\+values.\+h$>$}\newline
+{\ttfamily \#include $<$deal.\+I\+I/grid/grid\+\_\+generator.\+h$>$}\newline
+{\ttfamily \#include $<$deal.\+I\+I/grid/grid\+\_\+in.\+h$>$}\newline
+{\ttfamily \#include $<$deal.\+I\+I/grid/grid\+\_\+out.\+h$>$}\newline
+{\ttfamily \#include $<$deal.\+I\+I/grid/grid\+\_\+tools.\+h$>$}\newline
+{\ttfamily \#include $<$deal.\+I\+I/grid/tria.\+h$>$}\newline
+{\ttfamily \#include $<$deal.\+I\+I/grid/tria\+\_\+accessor.\+h$>$}\newline
+{\ttfamily \#include $<$deal.\+I\+I/grid/tria\+\_\+iterator.\+h$>$}\newline
+{\ttfamily \#include $<$deal.\+I\+I/lac/dynamic\+\_\+sparsity\+\_\+pattern.\+h$>$}\newline
+{\ttfamily \#include $<$deal.\+I\+I/lac/full\+\_\+matrix.\+h$>$}\newline
+{\ttfamily \#include $<$deal.\+I\+I/lac/precondition.\+h$>$}\newline
+{\ttfamily \#include $<$deal.\+I\+I/lac/solver\+\_\+cg.\+h$>$}\newline
+{\ttfamily \#include $<$deal.\+I\+I/lac/sparse\+\_\+matrix.\+h$>$}\newline
+{\ttfamily \#include $<$deal.\+I\+I/lac/vector.\+h$>$}\newline
+{\ttfamily \#include $<$deal.\+I\+I/numerics/data\+\_\+out.\+h$>$}\newline
+{\ttfamily \#include $<$deal.\+I\+I/numerics/matrix\+\_\+tools.\+h$>$}\newline
+{\ttfamily \#include $<$deal.\+I\+I/numerics/vector\+\_\+tools.\+h$>$}\newline
+{\ttfamily \#include $<$deal.\+I\+I/grid/manifold\+\_\+lib.\+h$>$}\newline
+{\ttfamily \#include $<$fstream$>$}\newline
+{\ttfamily \#include $<$iostream$>$}\newline
+{\ttfamily \#include $<$map$>$}\newline
+Include dependency graph for mesh.\+cc\+:
+% FIG 0
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structGrid6Func}{Grid6\+Func}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$int dim$>$ }\\void \mbox{\hyperlink{mesh_8cc_a99df96ee20cee03b4076b9cb7fc9b1e8}{print\+\_\+mesh\+\_\+info}} (const Triangulation$<$ dim $>$ \&triangulation, const std\+::string \&filename)
+\item 
+{\footnotesize template$<$int dim$>$ }\\void \mbox{\hyperlink{mesh_8cc_accacff204fffda67fc6bb195c02a063e}{cube\+\_\+hole}} ()
+\item 
+{\footnotesize template$<$int dim$>$ }\\void \mbox{\hyperlink{mesh_8cc_ab73c311f66c90aca02ebf8ba2ee8d42f}{subdivided\+\_\+rect}} ()
+\item 
+{\footnotesize template$<$int dim$>$ }\\void \mbox{\hyperlink{mesh_8cc_a1ec76ceb5fa8d76ea93820ed0f70f1ff}{merge\+\_\+cube\+\_\+rect}} ()
+\item 
+{\footnotesize template$<$int dim$>$ }\\void \mbox{\hyperlink{mesh_8cc_a96640349cae952e079640ec395a9d03d}{shift\+\_\+cube}} ()
+\item 
+{\footnotesize template$<$int dim$>$ }\\void \mbox{\hyperlink{mesh_8cc_a7961805a4426c98ab19f0b3e32a9086d}{cheese}} ()
+\item 
+int \mbox{\hyperlink{mesh_8cc_ae66f6b31b5ad750f1fe042a706a4e3d4}{main}} ()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{mesh_8cc_a7961805a4426c98ab19f0b3e32a9086d}\label{mesh_8cc_a7961805a4426c98ab19f0b3e32a9086d}} 
+\index{mesh.cc@{mesh.cc}!cheese@{cheese}}
+\index{cheese@{cheese}!mesh.cc@{mesh.cc}}
+\doxysubsubsection{\texorpdfstring{cheese()}{cheese()}}
+{\footnotesize\ttfamily template$<$int dim$>$ \\
+void cheese (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 157 of file mesh.\+cc.
+
+\mbox{\Hypertarget{mesh_8cc_accacff204fffda67fc6bb195c02a063e}\label{mesh_8cc_accacff204fffda67fc6bb195c02a063e}} 
+\index{mesh.cc@{mesh.cc}!cube\_hole@{cube\_hole}}
+\index{cube\_hole@{cube\_hole}!mesh.cc@{mesh.cc}}
+\doxysubsubsection{\texorpdfstring{cube\_hole()}{cube\_hole()}}
+{\footnotesize\ttfamily template$<$int dim$>$ \\
+void cube\+\_\+hole (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 69 of file mesh.\+cc.
+
+\mbox{\Hypertarget{mesh_8cc_ae66f6b31b5ad750f1fe042a706a4e3d4}\label{mesh_8cc_ae66f6b31b5ad750f1fe042a706a4e3d4}} 
+\index{mesh.cc@{mesh.cc}!main@{main}}
+\index{main@{main}!mesh.cc@{mesh.cc}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily int main (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 175 of file mesh.\+cc.
+
+\mbox{\Hypertarget{mesh_8cc_a1ec76ceb5fa8d76ea93820ed0f70f1ff}\label{mesh_8cc_a1ec76ceb5fa8d76ea93820ed0f70f1ff}} 
+\index{mesh.cc@{mesh.cc}!merge\_cube\_rect@{merge\_cube\_rect}}
+\index{merge\_cube\_rect@{merge\_cube\_rect}!mesh.cc@{mesh.cc}}
+\doxysubsubsection{\texorpdfstring{merge\_cube\_rect()}{merge\_cube\_rect()}}
+{\footnotesize\ttfamily template$<$int dim$>$ \\
+void merge\+\_\+cube\+\_\+rect (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 116 of file mesh.\+cc.
+
+\mbox{\Hypertarget{mesh_8cc_a99df96ee20cee03b4076b9cb7fc9b1e8}\label{mesh_8cc_a99df96ee20cee03b4076b9cb7fc9b1e8}} 
+\index{mesh.cc@{mesh.cc}!print\_mesh\_info@{print\_mesh\_info}}
+\index{print\_mesh\_info@{print\_mesh\_info}!mesh.cc@{mesh.cc}}
+\doxysubsubsection{\texorpdfstring{print\_mesh\_info()}{print\_mesh\_info()}}
+{\footnotesize\ttfamily template$<$int dim$>$ \\
+void print\+\_\+mesh\+\_\+info (\begin{DoxyParamCaption}\item[{const Triangulation$<$ dim $>$ \&}]{triangulation,  }\item[{const std\+::string \&}]{filename }\end{DoxyParamCaption})}
+
+\{Generating output for a given mesh\} The following function generates some output for any of the meshes we will be generating in the remainder of this program. In particular, it generates the following information\+:
+\begin{DoxyItemize}
+\item Some general information about the number of space dimensions in which this mesh lives and its number of cells.
+\end{DoxyItemize}
+
+Some general information about the number of space dimensions in which this mesh lives and its number of cells.
+\begin{DoxyItemize}
+\item The number of boundary faces that use each boundary indicator, so that it can be compared with what we expect. Finally, the function outputs the mesh in V\+TU format that can easily be visualized in Paraview or Vis\+It. 
+\end{DoxyItemize}
+
+Definition at line 56 of file mesh.\+cc.
+
+\mbox{\Hypertarget{mesh_8cc_a96640349cae952e079640ec395a9d03d}\label{mesh_8cc_a96640349cae952e079640ec395a9d03d}} 
+\index{mesh.cc@{mesh.cc}!shift\_cube@{shift\_cube}}
+\index{shift\_cube@{shift\_cube}!mesh.cc@{mesh.cc}}
+\doxysubsubsection{\texorpdfstring{shift\_cube()}{shift\_cube()}}
+{\footnotesize\ttfamily template$<$int dim$>$ \\
+void shift\+\_\+cube (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 137 of file mesh.\+cc.
+
+\mbox{\Hypertarget{mesh_8cc_ab73c311f66c90aca02ebf8ba2ee8d42f}\label{mesh_8cc_ab73c311f66c90aca02ebf8ba2ee8d42f}} 
+\index{mesh.cc@{mesh.cc}!subdivided\_rect@{subdivided\_rect}}
+\index{subdivided\_rect@{subdivided\_rect}!mesh.cc@{mesh.cc}}
+\doxysubsubsection{\texorpdfstring{subdivided\_rect()}{subdivided\_rect()}}
+{\footnotesize\ttfamily template$<$int dim$>$ \\
+void subdivided\+\_\+rect (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 94 of file mesh.\+cc.
+

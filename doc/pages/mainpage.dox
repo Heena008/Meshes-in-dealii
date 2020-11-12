@@ -1,0 +1,57 @@
+/*!
+	@mainpage Mathematical Outline
+	# Introduction
+The advection–diffusion equation is a combination of the diffusion and advection equations, and explains physical phenomena where particles, energy, or other physical quantities are transferred inside a physical system due to two processes: diffusion and advection. Depending on application, the same equation can be known as the convection–diffusion equation, drift-diffusion equation, or (generic) scalar transport equation.
+	# A Time-dependent Advection-Diffusion Equation with DEAL.II	
+	
+	We consider the a transient advection-diffusion equation on a unit square
+	\f$\Omega = [0,1] \times [0,1]\f$:
+		
+	\f{eqnarray*}{
+	
+	   \partial_t u + C \cdot \nabla u - \nabla\cdot\left(A\nabla u\right) u &=& f \ \textrm{in}\ [0,T]\times\Omega \\
+	   u(t,x) &=& g(x)  \ \textrm{on}\ [0,T]\times\Gamma_D \\
+	   \nabla u(t,x) \cdot n &=& h(x)  \ \textrm{on}\ [0,T]\times\Gamma_N \\
+	   u(0,x) &=& u_0(x)  \ \textrm{in}\ \Omega \\
+	
+	\f}
+	
+	for some known data \f$f,g,h,u_0\f$. Note that the initial
+	data needs to be compatible with the Dirichlet data on
+	\f$\Gamma_D\f$. The solution to this equation will be some
+	functions \f$u\in u_0 + L^2([0,T],H^1_{\Gamma_D}(\Omega))\f$
+	with \f$\partial_t u\in L^2([0,T],H^{-1}(\Omega))\f$.  Using
+	compactness arguments one can show \f$u\in
+	C([0,T],L^2(\Omega))\f$ so that the equation makes sense for
+	\f$u_0\in L^2(\Omega)\f$.  We multiply by an arbitrary test
+	functions \f$v \in H^1_{\Gamma_D}(\Omega))\f$, integrate in
+	space and then integrate by parts to obtain the standard weak
+	formulation: find \f$u\in u_0 +
+	L^2([0,T],H^1_{\Gamma_D}(\Omega))\f$ such that:
+	
+	\f{eqnarray*}{
+	
+	   \int_{\Omega} v\partial_t u \ {\rm d} x + \int_{\Omega}v\cdot \nabla u- \int_{\Omega} \nabla v \cdot A \nabla u \ {\rm d} x
+	   &=& \int_{\Omega} vf \ {\rm d} x + \int_{\Gamma_N} v h \ {\rm d} S
+	   \quad \forall \ v \in H^1_{\Gamma_D}(\Omega).
+	
+	\f}
+	
+	The Dirichlet boundary condition \f$u = g\f$ on \f$\Gamma_D\f$
+	is an *essential* boundary condition to be enforced on the
+	function space, while the flux boundary condition \f$\nabla u
+	\cdot n = h\f$ on \f$\Gamma_N\f$ turns into a *natural*
+	boundary condition which enters the variational form.
+	
+	A suitable finite element for the spatial discretization is
+	the standard conforming \f$Q_k\f$-element on
+	quadrilaterals. The temporal discretization in this tutorial
+	is done using a semi-implicit \f$\theta\f$-method. For
+	\f$\theta=1\f$ this is the implicit (unconditionally stable)
+	Euler and for \f$\theta=\frac{1}{2}\f$ this corresponds to the
+	Crank-Nicolson method (implicit trapezoidal rule).
+
+	The code is templated to work in 2D and 3D with the same
+	interface, see the [main file](@ref MainFile).
+	
+*/
